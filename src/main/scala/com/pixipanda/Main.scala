@@ -1,7 +1,7 @@
 package  com.pixipanda
 
 import com.pixipanda.loggenerator.EcommerceLogGenerator
-import com.pixipanda.producer.AvroPageViewProducer
+import com.pixipanda.producer.AvroClickStreamProducer
 
 
 object Main {
@@ -12,7 +12,7 @@ object Main {
     val logGeneratorConfig = configParser.loadLogGeneratorConfig
     val ecommerceLogGenerator = new EcommerceLogGenerator(logGeneratorConfig)
     val kafkaConfig = configParser.loadKafkaConfig
-    val kafkaProducer = new AvroPageViewProducer(kafkaConfig)
+    val kafkaProducer = new AvroClickStreamProducer(kafkaConfig)
     ecommerceLogGenerator.generateEvent(kafkaProducer)
 
   }

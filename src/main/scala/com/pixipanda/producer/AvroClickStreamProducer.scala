@@ -9,7 +9,7 @@ import org.apache.avro.generic.GenericData
 import org.apache.kafka.clients.producer.{ProducerRecord, KafkaProducer}
 
 
-class  AvroPageViewProducer(config:Config) extends Producer{
+class  AvroClickStreamProducer(config:Config) extends Producer{
 
   val prop = createProducerConfig()
   val producer = new KafkaProducer[String, ClickStream](prop)

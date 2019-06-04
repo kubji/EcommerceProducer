@@ -3,7 +3,7 @@ package  com.pixipanda.loggenerator
 import java.util.{Calendar, Date}
 
 
-import com.pixipanda.producer.{Producer, AvroPageViewProducer}
+import com.pixipanda.producer.{Producer, AvroClickStreamProducer}
 import com.typesafe.config.Config
 import org.apache.log4j.Logger
 
